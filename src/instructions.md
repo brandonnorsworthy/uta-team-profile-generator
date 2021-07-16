@@ -42,7 +42,7 @@ THEN I exit the application, and the HTML is generated
 
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
+![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./instructions_demo.png)
 
 The styling in the image is just an example, so feel free to add your own.
 
