@@ -1,10 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10vh;
     color: #ffffff;
-    background-color: #f34848;
+    background-color: #1a78e4;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: #1a78e4;
+    text-decoration: none;
 }
 
 header h1 {
@@ -12,7 +28,8 @@ header h1 {
 }
 
 section {
-    padding-top: 5vh;
+    width: 100vw;
+    padding: 4vh 0 1vh 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -55,4 +72,14 @@ section {
     flex-direction: column;
     padding: 10px;
     border: 1px solid #e4e4e4;
+}
+
+.card-bottom p a {
+    color: #1a78e4;
+}
+
+@media screen and (min-width: 992px) {
+    section {
+        max-width: 1200px;
+    }
 }
