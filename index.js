@@ -9,19 +9,41 @@ const Manager = require("./lib/Manager")
 //?generate a webpage that displays my teams info (emails and github profiles)
 //HTML file is generated that displays a nicely formatted team roster based on user input
 
-jack = new Manager("jack", 584968, "jack@work.com", 169)
-brandon = new Engineer("brandon", 156615, "brandon@work.com", "brandonnorsworthy")
-zach = new Engineer("zach", 156515, "zach@work.com", "zach1234")
-willy = new Intern("willy", 564648, "willy@work.com", "University of Texas")
+// jack = new Manager("jack", 584968, "jack@work.com", 169)
+// brandon = new Engineer("brandon", 156615, "brandon@work.com", "brandonnorsworthy")
+// zach = new Engineer("zach", 156515, "zach@work.com", "zach1234")
+// willy = new Intern("willy", 564648, "willy@work.com", "University of Texas")
 
-console.log("1", jack)
-console.log("2", brandon)
-console.log("3", zach)
-console.log("4", willy)
+// console.log("1", jack)
+// console.log("2", brandon)
+// console.log("3", zach)
+// console.log("4", willy)
 
-//!js
+const employeeQuestions = [ //questions that are uniform for all basic employees
+    {type: 'input', message: "Enter the Team Manager's name", name: 'employeeName'},
+    {type: 'input', message: "Enter the Team Manager's employee ID", name: 'id'},
+    {type: 'input', message: "Enter the Team Manager's email address", name: 'email'},
+]
+
+let team = []
+
+function init(){
     //?start the application
     //am prompted to enter the team manager’s name, employee ID, email address, and office number
+    inquirer
+    .prompt([
+        ...employeeQuestions,
+        {type: 'input', message: "Enter the manager's office number", name: 'office'},
+        ])
+    .then((value) => {
+        team.push(new Manager(...Object.values(value)))
+        console.log(team)
+    })
+}
+
+init()
+
+//!js
     //?enter the team manager’s name, employee ID, email address, and office number
     //presented with a menu with the option to add an engineer or an intern or to finish building my team
     //?select the engineer option
