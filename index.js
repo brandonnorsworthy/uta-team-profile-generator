@@ -2,41 +2,12 @@ const inquirer = require("inquirer")
 const jest = require("jest")
 const fs = require("fs")
 
+const Engineer = require("./lib/Engineer")
+const Intern = require("./lib/Intern")
+const Manager = require("./lib/Manager")
+
 //?generate a webpage that displays my teams info (emails and github profiles)
 //HTML file is generated that displays a nicely formatted team roster based on user input
-
-class Employee {
-    constructor(employeeName, id, email) {
-        this.employeeName = employeeName;
-        this.id = id;
-        this.email = email;
-    }
-}
-
-//require employee
-class Manager extends Employee {
-    //manager name, id, email, office
-    constructor(employeeName, id, email, officeNumber) {
-        super(employeeName, id, email);
-        this.officeNumber = officeNumber;
-    }
-}
-
-class Engineer extends Employee {
-    //engineer name, id, email, github
-    constructor(employeeName, id, email, githubUsername) {
-        super(employeeName, id, email);
-        this.githubUsername = githubUsername;
-    }
-}
-
-class Intern extends Employee {
-    //intern name, id, email, school
-    constructor(employeeName, id, email, school) {
-        super(employeeName, id, email);
-        this.school = school;
-    }
-}
 
 jack = new Manager("jack", 584968, "jack@work.com", 169)
 brandon = new Engineer("brandon", 156615, "brandon@work.com", "brandonnorsworthy")
