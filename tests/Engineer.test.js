@@ -1,9 +1,31 @@
 //require Engineer
+const Engineer = require("../lib/Engineer")
 
-//create test on manager class
+describe("Engineer", () => {
+    describe("Initialization", () => {
+        test("Engineer class contains name, id, email, github", () => {
+            //create test on Engineer class
+            const obj = new Engineer;
 
-//test to see if you can set github using our constructor
+            expect("employeeName" in obj).toEqual(true);
+            expect("id" in obj).toEqual(true);
+            expect("email" in obj).toEqual(true);
+            expect("githubUsername" in obj).toEqual(true);
+        })
 
-//test to see if getRole() returns "Engineer"
+        test("Engineer class contains name, id, email, github", () => {
+            //test to see if you can set github using our constructor
+            const test = "teststring"
+            const obj = new Engineer("name", "id", "email", test);
 
-//test to see if getGithub() returns github test value
+            expect(obj.githubUsername).toEqual(test);
+        })
+
+        test("Engineer class contains name, id, email, github", () => {
+            //test to see if class name returns "Engineer"
+            const obj = new Engineer();
+
+            expect(obj.constructor.name).toEqual("Engineer");
+        })
+    })
+})
