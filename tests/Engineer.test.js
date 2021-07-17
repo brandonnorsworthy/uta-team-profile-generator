@@ -1,11 +1,11 @@
 //require Engineer
-const Engineer = require("../lib/Engineer")
+const Engineer = require("../lib/Engineer");
 
 describe("Engineer", () => {
     describe("Initialization", () => {
         test("Engineer class contains name, id, email, github", () => {
             //create test on Engineer class
-            const obj = new Engineer;
+            const obj = new Engineer();
 
             expect("employeeName" in obj).toEqual(true);
             expect("id" in obj).toEqual(true);
@@ -28,4 +28,4 @@ describe("Engineer", () => {
             expect(obj.constructor.name).toEqual("Engineer");
         })
     })
-})
+});

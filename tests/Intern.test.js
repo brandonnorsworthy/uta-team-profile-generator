@@ -1,9 +1,31 @@
-//Require Intern  
+//Require Intern
+const Intern = require("../lib/Intern");
 
-//create test on Intern class
+describe("Intern", () => {
+    describe("Initialization", () => {
+        test("Intern class contains name, id, email, school", () => {
+            //create test on Intern class
+            const obj = new Intern();
 
-//test to see if you can set school using our constructor
+            expect("employeeName" in obj).toEqual(true);
+            expect("id" in obj).toEqual(true);
+            expect("email" in obj).toEqual(true);
+            expect("school" in obj).toEqual(true);
+        })
 
-//test to see if getRole() returns "Intern"
+        test("Intern class contains name, id, email, school", () => {
+            //test to see if you can set school using our constructor
+            const test = "teststring"
+            const obj = new Intern("name", "id", "email", test);
 
-//test to see if getSchool() returns school testvalue
+            expect(obj.school).toEqual(test);
+        })
+
+        test("Intern class contains name, id, email, school", () => {
+            //test to see if class name returns "Intern"
+            const obj = new Intern();
+
+            expect(obj.constructor.name).toEqual("Intern");
+        })
+    })
+});
