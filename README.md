@@ -9,13 +9,13 @@
   
   ## Table of Content
   
-  [Demo](#demo)  
-  [Installation Instructions](#installation-instructions)  
-  [Usage Information](#usage-information)  
-  [Test Instructions](#test-instructions)  
-  [Questions](#questions)  
+  + [Demo](#demo)  
+  + [Installation Instructions](#installation-instructions)  
+  + [Usage Information](#usage-information)  
+  + [Test Instructions](#test-instructions)  
+  + [Questions](#questions)  
   
-  # Demo
+  ## Demo
 
   ![demo gif](/assets/img/command-line-demo.gif)
 
@@ -26,7 +26,7 @@
   
   ## Usage-Information
   
-  Use node to run the index in the command-line to be prompted with questions that will create class objects based on your input, Once finished you can say you do not want to add anymore members. The HTML will be generated after you are prompted all the questions named index.html  
+  Use node to run the index in the command-line to be prompted with questions that will create class objects based on your input, Once finished you can say you do not want to add anymore members. The HTML will be generated after you are prompted all the questions named index.html.  
   ```node .```
   
   ## License
