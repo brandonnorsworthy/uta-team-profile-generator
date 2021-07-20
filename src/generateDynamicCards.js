@@ -11,7 +11,7 @@ function generateDynamicCards(teamMember) {
             //?clickable github username
             //GitHub profile opens in a new tab
             roleIconStr = `smart_toy`;
-            roleSpecificStr = `Github: <a href="https://github.com/${teamMember.githubUsername}">@${teamMember.githubUsername}</a>`;
+            roleSpecificStr = `Github: <a href="https://github.com/${teamMember.githubUsername}" target="_blank">@${teamMember.githubUsername}</a>`;
             break;
         case "Intern":
             roleIconStr = `school`;
